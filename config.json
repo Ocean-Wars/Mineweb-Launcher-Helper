@@ -1,0 +1,29 @@
+{
+  "name": "LauncherHelper",
+  "author": "Lockface77",
+  "version": "1.0.0",
+  "admin_menus": {
+    "GLOBAL__CUSTOMIZE": {
+      "Launcher Slider": {
+        "index": 7,
+        "icon": "slider",
+        "permission": "LAUNCHERHELPER__ADMIN_MANAGE_SLIDER",
+        "route": "/admin/launcher-slider"
+      }
+    }
+  },
+  "navbar_routes": {
+    "Launcher": "/launcher"
+  },
+  "useEvents": false,
+  "permissions" : {
+    "available" : [],
+    "default" : {
+      "0" : [],
+      "2" : []
+    }
+  },
+  "requirements" : {
+    "CMS" : "^1.2.0"
+  }
+}
