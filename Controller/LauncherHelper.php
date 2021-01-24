@@ -25,7 +25,7 @@ class LauncherHelper extends LauncherHelperAppController
             $this->Info->_delete($id);
 
             //Redirection vers notre page
-            $this->redirect('/admin/tutorial');
+            $this->redirect('/admin/launcherhelper/slider');
         } else {
             $this->redirect('/');
         }

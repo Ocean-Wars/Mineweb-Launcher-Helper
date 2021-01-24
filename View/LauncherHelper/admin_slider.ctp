@@ -39,7 +39,7 @@
                                 <?php foreach ($datas as $data): ?>
                                     <tr>
                                         <td><?= $data['slider']['image']; ?></td>
-                                        <td><a onclick="confirmDel('/admin/slider/tutorial/delete/<?= $data['slider']['id']; ?>')" class="btn btn-danger"><?= $Lang->get('GLOBAL__DELETE') ?></a></td>
+                                        <td><a onclick="confirmDel('/admin/launcherhelper/slider/delete/<?= $data['slider']['id']; ?>')" class="btn btn-danger"><?= $Lang->get('GLOBAL__DELETE') ?></a></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>
