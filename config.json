@@ -3,12 +3,16 @@
   "author": "Lockface77",
   "version": "1.0.0",
   "admin_menus": {
-    "GLOBAL__CUSTOMIZE": {
-      "Launcher Slider": {
-        "index": 7,
-        "icon": "slider",
-        "permission": "LAUNCHERHELPER__ADMIN_MANAGE_SLIDER",
-        "route": "/admin/launcher-slider"
+    "Launcher": {
+      "index": 5,
+      "icon": "tv",
+      "menu": {
+        "Launcher Slider": {
+          "index": 1,
+          "icon": "images",
+          "permission": "LAUNCHERHELPER__ADMIN_MANAGE_SLIDER",
+          "route": "/admin/launcher-slider"
+        }
       }
     }
   },
