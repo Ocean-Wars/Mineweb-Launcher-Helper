@@ -1,8 +1,14 @@
 <?php
 
 
-class LauncherHelper extends LauncherHelperAppController
+class LauncherhelperController extends LauncherHelperAppController
 {
+
+    public function index() {
+        // TODO
+        $this->redirect('/');
+    }
+
     public function admin_index()
     {
         if ($this->isConnected and $this->User->isAdmin()) {
@@ -15,7 +21,7 @@ class LauncherHelper extends LauncherHelperAppController
         }
     }
 
-    public function admin_index_delete() {
+    public function admin_delete() {
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->autoRender = null;
 
