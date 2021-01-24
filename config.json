@@ -1,5 +1,5 @@
 {
-  "name": "LauncherHelper",
+  "name": "Launcherhelper",
   "author": "Lockface77",
   "version": "1.0.0",
   "admin_menus": {
@@ -17,8 +17,9 @@
     }
   },
   "navbar_routes": {
-    "Launcher": "/launcher"
+    "Launcher": "/launcherhelper"
   },
+  "apiID":-1,
   "useEvents": false,
   "permissions" : {
     "available" : [],
