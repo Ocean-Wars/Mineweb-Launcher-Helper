@@ -3,7 +3,7 @@
 
 class LauncherHelper extends LauncherHelperAppController
 {
-    public function slider()
+    public function admin_slider()
     {
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->loadModel('LauncherHelper.Info');
@@ -15,7 +15,7 @@ class LauncherHelper extends LauncherHelperAppController
         }
     }
 
-    public function delete() {
+    public function admin_slider_delete() {
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->autoRender = null;
 
