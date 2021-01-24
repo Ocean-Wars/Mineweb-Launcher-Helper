@@ -11,7 +11,7 @@
           "index": 1,
           "icon": "images",
           "permission": "LAUNCHERHELPER__ADMIN_MANAGE_SLIDER",
-          "route": "/admin/launcherhelper/slider"
+          "route": "/admin/launcherhelper"
         }
       }
     }
