@@ -11,19 +11,16 @@ class LauncherHelperSchema extends CakeSchema {
 	}
 
 	public $launcherhelper__launcher_images = array(
-	    'id' => array(
-	        'type' => 'integer',
+        'id' => array('type' => 'integer',
             'null' => false,
             'default' => null,
-            'length' => 10,
-            'key' => 'primary'
-        ),
+            'unsigned' => false,
+            'key' => 'primary'),
         'image' => array(
             'type' => 'string',
             'null' => false,
             'default' => null,
             'collate' => 'latin1_swedish_ci',
-            'charset' => 'latin1'
-        )
+            'charset' => 'latin1')
     );
 }
