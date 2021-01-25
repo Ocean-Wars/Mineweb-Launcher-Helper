@@ -1,7 +1,7 @@
 <?php 
 class LauncherhelperAppSchema extends CakeSchema {
 
-	public $file = 'schema.php';
+    public $file = 'schema.php';
 
 	public function before($event = []) {
 		return true;
