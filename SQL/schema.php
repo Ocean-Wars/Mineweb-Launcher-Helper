@@ -10,7 +10,7 @@ class LauncherhelperAppSchema extends CakeSchema {
 	public function after($event = []) {
 	}
 
-	public $launcherhelper__slider = [
+	public $launcherhelper__launcher_images = [
         'id' => [
             'type' => 'integer',
             'null' => false,

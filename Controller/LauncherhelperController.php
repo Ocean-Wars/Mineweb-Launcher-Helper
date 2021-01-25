@@ -12,8 +12,8 @@ class LauncherhelperController extends AppController
     public function admin_index()
     {
         if ($this->isConnected and $this->User->isAdmin()) {
-            $this->loadModel('Launcherhelper.Info');
-            $datas = $this->Info->get();
+            $this->loadModel('Launcherhelper.LauncherImage');
+            $datas = $this->LauncherImage->get();
             $this->set(compact($datas));
             $this->set('title_for_layout', 'Launcher Slider');
         } else {

@@ -1,5 +1,5 @@
 <?php
-class Info extends LauncherhelperAppModel
+class LauncherImage extends LauncherhelperAppModel
 {
     public function get() {
         return $this->find('all');
