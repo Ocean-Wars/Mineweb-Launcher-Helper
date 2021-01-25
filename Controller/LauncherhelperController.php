@@ -13,9 +13,16 @@ class LauncherhelperController extends LauncherhelperAppController
     {
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->loadModel('Launcherhelper.LauncherImage');
-            $this->layout = 'admin';
-            $datas = $this->LauncherImage->get();
-            $this->set(compact($datas));
+            if ($this->request->is('ajax')) {
+                $this->autoRender = null;
+                $image = $this->request->data['image'];
+                $this->LauncherImage->add($image);
+                $this->response->body(json_encode(array('statut' => true, 'msg' => $this->Lang->get('GLOBAL__SUCCESS'))));
+            } else {
+                $this->layout = 'admin';
+                $datas = $this->LauncherImage->get();
+                $this->set(compact($datas));
+            }
         } else {
             $this->redirect('/');
         }

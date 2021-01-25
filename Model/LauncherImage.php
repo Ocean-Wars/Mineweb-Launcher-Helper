@@ -8,4 +8,10 @@ class LauncherImage extends LauncherhelperAppModel
     public function _delete($id) {
         return $this->delete($id);
     }
+
+    public function add($image) {
+        $this->create();
+        $this->set(['image' => $image]);
+        return $this->save();
+    }
 }
