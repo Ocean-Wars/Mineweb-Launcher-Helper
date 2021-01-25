@@ -13,15 +13,15 @@ class LauncherhelperController extends AppController
     {
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->loadModel('Launcherhelper.LauncherImage');
+            $this->layout = 'admin';
             $datas = $this->LauncherImage->get();
             $this->set(compact($datas));
-            $this->set('title_for_layout', 'Launcher Slider');
         } else {
             $this->redirect('/');
         }
     }
 
-    public function admin_delete() {
+    public function admin_delete($id) {
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->autoRender = null;
 
