@@ -1,5 +1,5 @@
 <?php
-class Info extends LauncherHelperAppModel
+class Info extends LauncherhelperAppModel
 {
     public function get() {
         return $this->find('all');

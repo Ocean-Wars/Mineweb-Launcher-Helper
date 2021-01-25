@@ -1,5 +1,5 @@
 <?php 
-class LauncherHelperAppSchema extends CakeSchema {
+class LauncherhelperAppSchema extends CakeSchema {
 
 	public $file = 'schema.php';
 
