@@ -1,7 +1,7 @@
 <?php
 
 
-class LauncherhelperController extends AppController
+class LauncherhelperController extends LauncherhelperAppController
 {
 
     public function index() {
