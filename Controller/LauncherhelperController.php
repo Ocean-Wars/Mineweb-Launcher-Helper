@@ -3,10 +3,27 @@
 
 class LauncherhelperController extends LauncherhelperAppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+    }
 
     public function index() {
-        // TODO
-        $this->redirect('/');
+        // we just want to send json objects
+        $this->autoRender = false;
+
+        $this->loadModel('Launcherhelper.LauncherImage');
+        $datas = $this->LauncherImage->get();
+        $result = array();
+        foreach ($datas as $data) {
+            array_push($result, $data['LauncherImage']['image']);
+        }
+
+        $resultJS = json_encode($result);
+        $this->response->type('json');
+        $this->response->body($resultJS);
+        return $this->response;
     }
 
     public function admin_index()
@@ -18,7 +35,6 @@ class LauncherhelperController extends LauncherhelperAppController
                 $image = $this->request->data['image'];
                 $this->LauncherImage->add($image);
                 $this->response->body(json_encode(array('statut' => true, 'msg' => $this->Lang->get('GLOBAL__SUCCESS'))));
-
             } else {
                 $this->layout = 'admin';
                 $datas = $this->LauncherImage->get();
