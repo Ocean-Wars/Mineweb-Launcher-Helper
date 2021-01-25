@@ -18,6 +18,7 @@ class LauncherhelperController extends LauncherhelperAppController
                 $image = $this->request->data['image'];
                 $this->LauncherImage->add($image);
                 $this->response->body(json_encode(array('statut' => true, 'msg' => $this->Lang->get('GLOBAL__SUCCESS'))));
+
             } else {
                 $this->layout = 'admin';
                 $datas = $this->LauncherImage->get();
@@ -32,13 +33,13 @@ class LauncherhelperController extends LauncherhelperAppController
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->autoRender = null;
 
-            $this->loadModel('Tutorial.Info');
+            $this->loadModel('Launcherhelper.LauncherImage');
 
             //J'utilise _delete() car delete() existe déjà avec cakephp
-            $this->Info->_delete($id);
+            $this->LauncherImage->_delete($id);
 
             //Redirection vers notre page
-            $this->redirect('/admin/launcherhelper/slider');
+            $this->redirect('/admin/launcherhelper');
         } else {
             $this->redirect('/');
         }

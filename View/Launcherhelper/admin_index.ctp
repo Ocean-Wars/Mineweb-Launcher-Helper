@@ -38,7 +38,7 @@
                                 <tbody>
                                 <?php foreach ($datas as $data): ?>
                                     <tr>
-                                        <td><?= $data['LauncherImage']['image']; ?></td>
+                                        <td><img style="max-height: 1000px; max-width: 1000px; height: auto; width: auto" src="<?= $data['LauncherImage']['image']; ?>"></td>
                                         <td><a onclick="confirmDel('/admin/launcherhelper/launcherhelper/delete/<?= $data['LauncherImage']['id']; ?>')" class="btn btn-danger"><?= $Lang->get('GLOBAL__DELETE') ?></a></td>
                                     </tr>
                                 <?php endforeach; ?>
