@@ -21,7 +21,7 @@ class LauncherhelperController extends LauncherhelperAppController
             } else {
                 $this->layout = 'admin';
                 $datas = $this->LauncherImage->get();
-                $this->set(compact($datas));
+                $this->set(compact('datas'));
             }
         } else {
             $this->redirect('/');
